@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
+// import { createAsyncThunk } from "@reduxjs/toolkit";
 
 const initialState = [];
 
 const cartSlice = createSlice({
-  name: "cart",
+  name: "product",
   initialState,
   reducers: {
     add(state,action){
@@ -17,3 +18,7 @@ const cartSlice = createSlice({
 
 export const {add,remove} = cartSlice.actions;
 export default cartSlice.reducer;
+
+export  function getProducts(){
+    return
+}
