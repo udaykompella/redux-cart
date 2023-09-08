@@ -1,14 +1,18 @@
 import { useState, useEffect } from "react";
 import { Button, Card } from "react-bootstrap";
-import {useDispatch} from "react-redux";
+// import {useDispatch} from "react-redux";
 import {add} from "./store/cartSlice";
+import { getProducts } from "./store/productSlice";
+import { useDispatch,useSelector } from "react-redux";
 const Product = () => {
   const dispatch = useDispatch();
+  const {data:products } = useSelector(state => state.product)
   const [product, setProduct] = useState([]);
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((data) => data.json())
-      .then((result) => setProduct(result));
+    // fetch("https://fakestoreapi.com/products")
+    //   .then((data) => data.json())
+    //   .then((result) => setProduct(result));
+     dispatch(getProducts)
   }, []);
 
   const addToCart = (product) => {
