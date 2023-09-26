@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Button, Card } from "react-bootstrap";
 // import {useDispatch} from "react-redux";
-import {add} from "./store/cartSlice";
-import { fetchProducts, getProducts } from "./store/productSlice";
+import {add} from "../store/cartSlice";
+import { fetchProducts, getProducts } from "../store/productSlice";
 import { useDispatch,useSelector } from "react-redux";
 const Product = () => {
   const dispatch = useDispatch();

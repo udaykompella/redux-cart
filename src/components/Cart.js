@@ -2,7 +2,7 @@ import { UseSelector, useSelector } from "react-redux/es/hooks/useSelector"
 import { Card } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import { remove } from "./store/cartSlice";
+import { remove } from "../store/cartSlice";
 
 const Cart = () =>{
     const dispatch = useDispatch()
